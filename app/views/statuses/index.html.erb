@@ -12,4 +12,8 @@
     <div class="admin">|  <span><%= link_to "Edit", edit_status_path(status) %></span> | <span><%= link_to "Delete", status , method: :delete , data: { confirm: "Are you sure?"} %></span>
     </div>
   </div>
+
 <% end %>
+<br />
+<br />
+<%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => "btn btn-primary sign_out" %>
