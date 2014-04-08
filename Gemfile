@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'protected_attributes'
+
 gem 'simple_form'
 gem 'devise'
 gem 'therubyracer'

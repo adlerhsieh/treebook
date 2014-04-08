@@ -6,7 +6,7 @@
 
 <% @statuses.each do |status| %>
   <div class="status">
-  	<span>Name</span>
+  	<span><%= status.user.full_name %></span>
     <p><%= status.content %></p>
     <span class="meta"><%= link_to time_ago_in_words(status.created_at) + " ago", status %></span>
     <div class="admin">|  <span><%= link_to "Edit", edit_status_path(status) %></span> | <span><%= link_to "Delete", status , method: :delete , data: { confirm: "Are you sure?"} %></span>

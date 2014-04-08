@@ -5,3 +5,6 @@
 $ ->
 	$('.status').hover (event) ->
 		$(this).toggleClass("hover")
+
+	$('.btn-ready').hover (event) ->
+		$(this).toggleClass("active")

@@ -3,7 +3,7 @@
 <div class="page-header">
   <h1></h1>
 </div>
-<p><%= @status.user.first_name %></p>
+<p><%= @status.user.full_name %></p>
 <p><%= @status.content %></p>
 
 <%= link_to 'Edit', edit_status_path(@status) %> |
