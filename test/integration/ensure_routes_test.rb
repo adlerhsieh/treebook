@@ -17,4 +17,9 @@ class EnsureRoutesTest < ActionDispatch::IntegrationTest
 		assert_response :redirect
 		assert_redirected_to '/'
 	end
+
+	test "profile page display successfully" do
+		get '/adlerhsieh'
+		assert_response :success
+	end
 end
