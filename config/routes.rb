@@ -1,5 +1,12 @@
 Treebook::Application.routes.draw do
   devise_for :users
+
+devise_scope :user do
+    get 'registration', to: 'devise/registrations#new', as: :register
+    get 'signin', to: 'devise/sessions#new', as: :signin
+    get 'signout', to: 'devise/sessions#destroy', as: :signout
+end
+
   resources :users
   resources :statuses
   root :to => "statuses#index"
