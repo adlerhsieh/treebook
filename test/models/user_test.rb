@@ -22,11 +22,15 @@ class UserTest < ActiveSupport::TestCase
 
   test "a user should enter a profile name with the right format" do
   	user = User.new
-  	user.profile_name = "has blank"
-  	
   	assert !user.save
   	assert !user.errors[:profile_name].empty?
-  	assert user.errors[:profile_name].include?("profile should be in the right format.")
+  	assert user.errors[:profile_name].include?("should be in the right format.")
   end
 
+  test "a user has a profile name in the right format" do
+    user = User.new(first_name: "adler", last_name: "hsieh", email: "nkj20933@hotmail.com")
+    user.password = user.password_confirmation = "1234asdf"
+    user.profile_name = "hellothis"
+    assert user.save
+  end
 end
