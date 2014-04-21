@@ -13,6 +13,9 @@ class StatusesController < ApplicationController
   def show
   end
 
+  def profile_get
+    @profile = Status.user.profile_name 
+  end
   # GET /statuses/new
   def new
     @status = Status.new

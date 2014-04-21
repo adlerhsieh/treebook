@@ -2,12 +2,17 @@
 
 <% if @statuses %>
 	<% @statuses.each do |status| %>
-	<div class="status">
-  		<span><%= status.user.full_name %></span>
-    	<p><%= status.content %></p>
-    	<span class="meta"><%= link_to time_ago_in_words(status.created_at) + " ago", status %></span>
-    	<div class="admin">|  <span><%= link_to "Edit", edit_status_path(status) %></span> | <span><%= link_to "Delete", status , method: :delete , data: { confirm: "Are you sure?"} %></span>
-    	</div>
+	
+  <div class="status">
+  	<div class="row">
+	  	<div class="col-md-1"><%= image_tag status.user.gravatar_url %></div>
+	  	<div class="col-md-8">
+		    <p><%= status.content %></p>
+		    <span class="meta"><%= link_to time_ago_in_words(status.created_at) + " ago", status %></span>
+		    <div class="admin">|  <span><%= link_to "Edit", edit_status_path(status) %></span> | <span><%= link_to "Delete", status , method: :delete , data: { confirm: "Are you sure?"} %></span>
+		    </div>
+	  	</div>
+	  </div>
   </div>
 	<% end %>
 <% end %>
