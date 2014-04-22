@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby '1.9.3'
 
 gem 'simple_form'
 gem 'devise'
@@ -17,7 +17,6 @@ group :production do
 	gem 'pg'
 end
 
-gem 'ruby'
 gem 'rails_12factor', group: :production
 
 # Use SCSS for stylesheets
